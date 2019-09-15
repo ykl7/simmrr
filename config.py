@@ -1,0 +1,13 @@
+GEN_ENCODER_API_KEY='d52c40fc4c2c4fcfb768ce18a7d1bafc'
+DATA_DIR='/mnt/msmarco-metric-data'
+QUERY_PAIR_SET_DATA=DATA_DIR+'/query_pair_set.pkl'
+COUNT_MAP_DATA=DATA_DIR+'/query_pair_count.pkl'
+DEV_PARSE_DATA=DATA_DIR+'/dev_parse.pkl'
+TRAIN_SESSION_FILE_PATH=DATA_DIR+'/marco_ann_session.train.all.tsv'
+DEV_SESSION_FILE_PATH=DATA_DIR+'/marco_ann_session.dev.all.tsv'
+EMBEDDINGS_CSV_DATA=DATA_DIR+'/embeddings.csv'
+EMBEDDINGS_DATA=DATA_DIR+'/embeddings.pkl'
+TRAIN_QUERIES_FILE_PATH=DATA_DIR+'/queries.train.tsv'
+DEV_QUERIES_FILE_PATH=DATA_DIR+'/queries.dev.tsv'
+EVAL_QUERIES_FILE_PATH=DATA_DIR+'/queries.eval.tsv'
+QUERY_SIMILARITY_THRESHOLD=0.9
