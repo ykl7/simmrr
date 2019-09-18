@@ -137,11 +137,8 @@ def sim_mean_reciprocal_rank():
         for k,v in negatives.items():
             sim_scores.append(v)
         sorted_sim_scores = sorted(sim_scores, reverse=True)
-        query_rank = sorted_sim_scores.index(last_context_similarity)
-        if query_rank == 0:
-            query_mrr = 1
-        else:
-            query_mrr = 1/query_rank
+        query_rank = sorted_sim_scores.index(last_context_similarity)+1
+        query_mrr = 1/query_rank
         sum_mrr += query_mrr
     mean_mrr = sum_mrr/len(dev_parse)
     dev_parse_file.close()
@@ -177,11 +174,8 @@ def mean_reciprocal_rank(query, next_query, count_map):
         except:
             return 0
     sorted_counts = sorted(all_counts, reverse=True)
-    rank = all_counts.index(count_map[(next_query, query)])
-    if rank != 0
-        reciprocal_rank = 1/rank
-    else:
-        reciprocal_rank = 1
+    rank = all_counts.index(count_map[(next_query, query)])+1
+    reciprocal_rank = 1/rank
     return reciprocal_rank
 
 if __name__=='__main__':
