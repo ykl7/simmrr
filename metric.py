@@ -178,9 +178,9 @@ def mean_reciprocal_rank(query, next_query, count_map):
             return 0
     sorted_counts = sorted(all_counts, reverse=True)
     rank = all_counts.index(count_map[(next_query, query)])
-    try:
+    if rank != 0
         reciprocal_rank = 1/rank
-    except:
+    else:
         reciprocal_rank = 1
     return reciprocal_rank
 
